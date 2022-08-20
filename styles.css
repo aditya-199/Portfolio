@@ -1,0 +1,394 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #eff4fd;
+}
+
+.cards,
+.myskills {
+    padding: 2rem 5rem;
+}
+
+nav {
+    display: flex;
+    width: 84%;
+    margin: auto;
+    padding: 20px 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 100px;
+    cursor: pointer;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ff0000;
+}
+
+.detel {
+    margin-left: 8%;
+    margin-top: 15%;
+}
+
+.detel h1 {
+    font-size: 50px;
+    color: #212121;
+    margin-bottom: 20px;
+}
+
+span {
+    color: #ffa500;
+}
+
+
+.detel p {
+    color: #555;
+    line-height: 22px;
+}
+
+.detel a {
+    background: #212121;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    display: inline-block;
+    margin: 30px 0;
+    border-radius: 5px;
+}
+
+.images {
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}
+
+.images img {
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: all .7s;
+}
+
+.images:hover .shape {
+    bottom: 40px;
+}
+
+.images:hover .girl {
+    left: 45%;
+}
+
+.social {
+    margin-left: 8%;
+    margin-top: 100px;
+}
+
+.social a {
+    font-size: 30px;
+    color: #212121;
+    margin-right: 20px;
+}
+
+.social a:hover {
+    color: orange;
+}
+
+.h1_bold {
+    padding: 10rem 8rem;
+    line-height: 3rem;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 3rem;
+
+}
+
+.myskills {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1rem;
+    background-color: #ffa500;
+    /* padding: 13rem 2rem; */
+}
+
+.myskills .skills {
+    text-align: center;
+    margin: auto;
+    /* border: 1px solid red; */
+    position: relative;
+    height: 22rem;
+    width: 16rem;
+}
+
+.skills::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* background-color: #555; */
+    /* background-color: #e9586e;
+    height: 50%;
+    width: 50%; */
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.skills:hover::before{
+    opacity: 1;
+    transition-delay: 0.3s;
+}
+
+.img_myskills {
+    width: 100%;
+    height: 100%;
+    /* background-color: #ff0000; */
+}
+
+
+.desc {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    /* height: 100%;
+    width: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  
+}
+
+.desc h2, img
+{
+    /* padding-bottom: 4rem 0rem; */
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+sup{
+    position: relative;
+    /* background-color: black; */
+    width: 2rem;
+    height: 2rem;
+    top: -1.9rem;
+    right: -.5rem;
+}
+
+.img_myskills img{
+    transition: all 0.3s ;
+}
+
+.skills:hover img{
+    opacity: 0;
+}
+
+.desc :is(h2, p){
+    transform: translateY(-.5rem);
+    transition: all 0.3s;
+    opacity: 0; 
+    color: #fff;  
+}
+
+.desc{
+    padding: 1rem 3rem;
+    background-color: rgb(15, 9, 9);
+    border-radius: 2rem;
+    box-shadow: 10px 10px 5px 5px rgba(0,0,0, 0.3);
+    opacity: 0;  
+}
+
+.skills:hover .desc{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.skills:hover .desc h2{
+    transform: translateY(0);
+    transition-delay: .3s;
+    opacity: 1;
+}
+
+.skills:hover .desc p{
+    transform: translateY(0);
+    transition-delay: .5s;
+    opacity: 1; 
+}
+
+.skills:hover .desc p img{
+    opacity: 1;
+}
+
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 4.9rem;
+    padding: 2rem 5rem;
+    background-color: #EFF4FD;
+}
+
+.card {
+    box-shadow: 10px 10px 5px 5px rgb(0 0 0/ 20%);
+    position: relative;
+    width: 300px;
+    height: 150px;
+    border-radius: 10px;
+    transition: 0.3s;
+    padding: 30px 50px;
+    background-color: #000;
+    cursor: pointer;
+}
+
+.card:hover{
+    height: 250px;
+}
+
+.imgbox img{
+    width: 100%;
+    height: 100%;
+    transform: translateY(-80px);
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px 5px rgb(0 0 0/ 20%);
+
+}
+
+.info{
+    padding: 10px 20px;
+    text-align: center;
+    transform: translateY(-200px);
+    opacity: 0;
+    color: #fff;
+    transition: .3s;
+}
+
+.info > div a{
+    text-decoration: none;
+    color: #000;
+    background-color: #ffa500;
+    padding: .5rem 2rem;
+    border-radius: 2rem;
+    margin-top: 1rem;
+}
+
+.info > div{
+    display: flex;
+    justify-content: center;
+    gap: 1rem; 
+}
+
+.card:hover .info{
+    opacity: 1;
+    transform: translateY(-50px);
+}
+
+.my_blogs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(./images/blog.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.blog{
+    position: relative;
+    top: 0;
+    width: 300px;
+    height: 600px;
+    background: #fff;
+    transform: rotate(-37.5deg) skewX(10deg);
+    box-shadow: -35px 35px 50px rgba(0, 0, 0, 1);
+    transition: 0.5s;
+}
+
+/* .blog:hover{
+    transform: rotate(-37.5deg) skewX(10deg) translate(20px, -20px);
+    box-shadow: -50px 50px 100px rgba(0, 0, 0, 1);
+} */
+
+/* .blog::before{
+    content: '';
+    width: 30px;
+    height: 100%;
+    background: url(/images/blog.jpg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: skewY(-45deg) translate(-30px,-16px);
+    box-shadow: inset 10px 0 20px rgba(0, 0, 9, .2);
+}
+
+.blog::after{
+    content: '';
+    width: 100%;
+    height: 30px;
+    background: #ccc;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: skewX(-45deg) translate(15px, 29px);
+} */
+.blog h2{
+    position: absolute;
+    bottom: 100px;
+    left: 20px;
+    font-size: 5em;
+    line-height: 1em;
+    color: #000;
+    background-color: transparent;
+}
+
+
+.blog .writer{
+    position: absolute;
+    bottom:20px;
+    right: 20px;
+    color: #262626;
+    font-size: 0.6em;
+    padding-top:5px;
+    font-weight: 500;
+    border-top-left-radius: 1px solid #262626;
+}
+
+.blog .writer i{
+    font-weight: 700;
+}
+
+/* .blog .cover{
+position: absolute;
+top: 0;
+left: 0;
+width:100%;
+height: 70%;
+background: url(/images/blog.jpg);
+background-size: cover;
+} */
